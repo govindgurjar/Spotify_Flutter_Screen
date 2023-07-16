@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter_screen/colors/colors.dart';
-import 'package:spotify_flutter_screen/models/create_password.dart';
+import 'package:spotify_flutter_screen/utils/gender.dart';
 
-class CreateAccount extends StatelessWidget {
-  const CreateAccount({super.key});
+class CreatePassword extends StatelessWidget {
+  const CreatePassword({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class CreateAccount extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    "What's your email?",
+                    "Create a password",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -40,7 +40,7 @@ class CreateAccount extends StatelessWidget {
             ),
             TextField(
               decoration: InputDecoration(
-                  hintText: 'Enter your email',
+                  hintText: 'Enter your password',
                   hintStyle: TextStyle(color: Colors.white, fontSize: 14),
                   border: OutlineInputBorder(),
                   filled: true,
@@ -51,7 +51,7 @@ class CreateAccount extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    "You’ll need to confirm this email later.",
+                    "Use atleast 8 characters.",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 10,
@@ -66,7 +66,7 @@ class CreateAccount extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => CreatePassword(),
+                      builder: (context) => GenderPage(),
                     ));
               },
               child: Container(

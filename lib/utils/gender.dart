@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter_screen/colors/colors.dart';
-import 'package:spotify_flutter_screen/models/gender.dart';
+import 'package:spotify_flutter_screen/utils/name.dart';
 
-class CreatePassword extends StatelessWidget {
-  const CreatePassword({super.key});
+class GenderPage extends StatelessWidget {
+  const GenderPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class CreatePassword extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    "Create a password",
+                    "What's your gender?",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -40,33 +40,18 @@ class CreatePassword extends StatelessWidget {
             ),
             TextField(
               decoration: InputDecoration(
-                  hintText: 'Enter your password',
                   hintStyle: TextStyle(color: Colors.white, fontSize: 14),
                   border: OutlineInputBorder(),
                   filled: true,
                   fillColor: MyColors.accountBox),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                children: [
-                  Text(
-                    "Use atleast 8 characters.",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 10,
-                    ),
-                  )
-                ],
-              ),
-            ),
-            SizedBox(height: 20),
+            SizedBox(height: 40),
             InkWell(
               onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => GenderPage(),
+                      builder: (context) => NamePage(),
                     ));
               },
               child: Container(

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter_screen/colors/colors.dart';
+import 'package:spotify_flutter_screen/utils/create_password.dart';
 
-class GenderPage extends StatelessWidget {
-  const GenderPage({super.key});
+class CreateAccount extends StatelessWidget {
+  const CreateAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +29,7 @@ class GenderPage extends StatelessWidget {
               child: Row(
                 children: [
                   Text(
-                    "What's your gender?",
+                    "What's your email?",
                     style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
@@ -39,14 +40,35 @@ class GenderPage extends StatelessWidget {
             ),
             TextField(
               decoration: InputDecoration(
+                  hintText: 'Enter your email',
                   hintStyle: TextStyle(color: Colors.white, fontSize: 14),
                   border: OutlineInputBorder(),
                   filled: true,
                   fillColor: MyColors.accountBox),
             ),
-            SizedBox(height: 40),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                children: [
+                  Text(
+                    "You’ll need to confirm this email later.",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 10,
+                    ),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(height: 20),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => CreatePassword(),
+                    ));
+              },
               child: Container(
                 height: 45,
                 width: 90,

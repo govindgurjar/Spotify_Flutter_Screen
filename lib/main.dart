@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter_screen/homepage.dart';
-import 'package:spotify_flutter_screen/models/create_account.dart';
+import 'package:spotify_flutter_screen/utils/create_account.dart';
 
 void main() {
   runApp(const MyApp());
