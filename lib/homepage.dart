@@ -20,15 +20,15 @@ class _HomePageState extends State<HomePage> {
             Image.asset(
               'images/intro.png',
             ),
-            SizedBox(height: 20),
-            Text(
+            const SizedBox(height: 20),
+            const Text(
               'Millions of Songs.',
               style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.bold,
                   fontSize: 32),
             ),
-            Text(
+            const Text(
               'Free on Spotify.',
               style: TextStyle(
                   color: Colors.white,
@@ -37,13 +37,13 @@ class _HomePageState extends State<HomePage> {
             ),
             Column(
               children: [
-                SizedBox(height: 40),
+                const SizedBox(height: 40),
                 InkWell(
                   onTap: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => CreateAccount(),
+                          builder: (context) => const CreateAccount(),
                         ));
                   },
                   child: Container(
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
                     decoration: BoxDecoration(
                         color: MyColors.green,
                         borderRadius: BorderRadius.circular(30)),
-                    child: Center(
+                    child: const Center(
                       child: Text(
                         "Sign up free",
                         style: TextStyle(
@@ -63,7 +63,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Container(
                   height: 49,
                   width: 337,
@@ -76,8 +76,8 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Image.asset('images/google.png'),
-                        SizedBox(width: 55),
-                        Text(
+                        const SizedBox(width: 55),
+                        const Text(
                           "Continue with Google",
                           style: TextStyle(
                               fontSize: 20,
@@ -88,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Container(
                   height: 49,
                   width: 337,
@@ -101,8 +101,8 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Image.asset('images/facebook.png'),
-                        SizedBox(width: 55),
-                        Text(
+                        const SizedBox(width: 55),
+                        const Text(
                           "Continue with Facebook",
                           style: TextStyle(
                               fontSize: 20,
@@ -113,7 +113,7 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
+                const SizedBox(height: 15),
                 Container(
                   height: 49,
                   width: 337,
@@ -126,8 +126,8 @@ class _HomePageState extends State<HomePage> {
                     child: Row(
                       children: [
                         Image.asset('images/apple.png'),
-                        SizedBox(width: 55),
-                        Text(
+                        const SizedBox(width: 55),
+                        const Text(
                           "Continue with Apple",
                           style: TextStyle(
                               fontSize: 20,
@@ -138,15 +138,15 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 15),
-                Text(
+                const SizedBox(height: 15),
+                const Text(
                   "Log in",
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                       color: Colors.white),
                 ),
-                SizedBox(height: 90),
+                const SizedBox(height: 90),
               ],
             ),
           ],

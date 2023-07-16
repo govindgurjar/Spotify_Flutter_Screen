@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter_screen/colors/colors.dart';
-import 'package:spotify_flutter_screen/utils/gender.dart';
+import 'package:spotify_flutter_screen/utils/choose_artists.dart';
 
 class NamePage extends StatelessWidget {
   const NamePage({super.key});
@@ -11,7 +11,7 @@ class NamePage extends StatelessWidget {
       backgroundColor: MyColors.theme,
       appBar: AppBar(
         backgroundColor: MyColors.theme,
-        title: Center(
+        title: const Center(
           child: Text(
             'Create account',
             style: TextStyle(
@@ -24,9 +24,9 @@ class NamePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 20),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const SizedBox(height: 20),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Row(
                   children: [
                     Text(
@@ -39,7 +39,7 @@ class NamePage extends StatelessWidget {
                   ],
                 ),
               ),
-              TextField(
+              const TextField(
                 decoration: InputDecoration(
                     hintText: 'Enter your name',
                     hintStyle: TextStyle(color: Colors.white, fontSize: 14),
@@ -47,8 +47,8 @@ class NamePage extends StatelessWidget {
                     filled: true,
                     fillColor: MyColors.accountBox),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Row(
                   children: [
                     Text(
@@ -61,14 +61,14 @@ class NamePage extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 20),
-              Divider(
+              const SizedBox(height: 20),
+              const Divider(
                 color: Colors.grey,
                 thickness: 1.5,
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Container(
-                child: Text(
+                child: const Text(
                   "By tapping on “Create account”, you agree to the spotify Terms of Use.",
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
@@ -78,7 +78,7 @@ class NamePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Row(
                 children: [
                   Text(
@@ -89,9 +89,9 @@ class NamePage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Container(
-                child: Text(
+                child: const Text(
                   "To learn more about how Spotify collect, uses, shares and protects your personal data, Please see the Spotify Privacy Policy.",
                   maxLines: 3,
                   overflow: TextOverflow.ellipsis,
@@ -101,7 +101,7 @@ class NamePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Row(
                 children: [
                   Text(
@@ -112,10 +112,10 @@ class NamePage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: Text(
                       "Please send me news and offers from Spotify.",
                       maxLines: 3,
@@ -128,7 +128,7 @@ class NamePage extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {},
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       radius: 20,
                       backgroundColor: Colors.grey,
                       child: CircleAvatar(
@@ -139,10 +139,10 @@ class NamePage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 children: [
-                  Expanded(
+                  const Expanded(
                     child: Text(
                       "Share my registration data with Spotify’s content providers for marketing purposes.",
                       softWrap: false,
@@ -156,7 +156,7 @@ class NamePage extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {},
-                    child: CircleAvatar(
+                    child: const CircleAvatar(
                       radius: 20,
                       backgroundColor: Colors.grey,
                       child: CircleAvatar(
@@ -167,16 +167,22 @@ class NamePage extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 150),
+              const SizedBox(height: 150),
               InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ChooseArtists(),
+                      ));
+                },
                 child: Container(
                   height: 60,
                   width: 200,
                   decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(30)),
-                  child: Center(
+                  child: const Center(
                     child: Text(
                       'Create an account',
                       style: TextStyle(fontWeight: FontWeight.bold),

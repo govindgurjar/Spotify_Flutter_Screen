@@ -11,7 +11,7 @@ class GenderPage extends StatelessWidget {
       backgroundColor: MyColors.theme,
       appBar: AppBar(
         backgroundColor: MyColors.theme,
-        title: Center(
+        title: const Center(
           child: Text(
             'Create account',
             style: TextStyle(
@@ -23,9 +23,9 @@ class GenderPage extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Text(
@@ -38,20 +38,20 @@ class GenderPage extends StatelessWidget {
                 ],
               ),
             ),
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                   hintStyle: TextStyle(color: Colors.white, fontSize: 14),
                   border: OutlineInputBorder(),
                   filled: true,
                   fillColor: MyColors.accountBox),
             ),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             InkWell(
               onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => NamePage(),
+                      builder: (context) => const NamePage(),
                     ));
               },
               child: Container(
@@ -60,7 +60,7 @@ class GenderPage extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.grey,
                     borderRadius: BorderRadius.circular(30)),
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Next',
                     style: TextStyle(fontWeight: FontWeight.bold),

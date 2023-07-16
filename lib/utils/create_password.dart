@@ -11,7 +11,7 @@ class CreatePassword extends StatelessWidget {
       backgroundColor: MyColors.theme,
       appBar: AppBar(
         backgroundColor: MyColors.theme,
-        title: Center(
+        title: const Center(
           child: Text(
             'Create account',
             style: TextStyle(
@@ -23,9 +23,9 @@ class CreatePassword extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            SizedBox(height: 20),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const SizedBox(height: 20),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Text(
@@ -38,7 +38,7 @@ class CreatePassword extends StatelessWidget {
                 ],
               ),
             ),
-            TextField(
+            const TextField(
               decoration: InputDecoration(
                   hintText: 'Enter your password',
                   hintStyle: TextStyle(color: Colors.white, fontSize: 14),
@@ -46,8 +46,8 @@ class CreatePassword extends StatelessWidget {
                   filled: true,
                   fillColor: MyColors.accountBox),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
+            const Padding(
+              padding: EdgeInsets.all(8.0),
               child: Row(
                 children: [
                   Text(
@@ -60,13 +60,13 @@ class CreatePassword extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             InkWell(
               onTap: () {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => GenderPage(),
+                      builder: (context) => const GenderPage(),
                     ));
               },
               child: Container(
@@ -75,7 +75,7 @@ class CreatePassword extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: Colors.grey,
                     borderRadius: BorderRadius.circular(30)),
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Next',
                     style: TextStyle(fontWeight: FontWeight.bold),
