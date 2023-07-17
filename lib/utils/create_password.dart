@@ -39,6 +39,7 @@ class CreatePassword extends StatelessWidget {
               ),
             ),
             const TextField(
+              obscureText: true,
               decoration: InputDecoration(
                   hintText: 'Enter your password',
                   hintStyle: TextStyle(color: Colors.white, fontSize: 14),

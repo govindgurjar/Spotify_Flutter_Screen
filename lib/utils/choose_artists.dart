@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:spotify_flutter_screen/colors/colors.dart';
-import 'package:spotify_flutter_screen/utils/gender.dart';
+import 'package:spotify_flutter_screen/utils/podcast.dart';
 
 class ChooseArtists extends StatelessWidget {
   const ChooseArtists({super.key});
@@ -264,7 +264,13 @@ class ChooseArtists extends StatelessWidget {
               left: 150,
               bottom: 10,
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => PodcastPage(),
+                      ));
+                },
                 child: Container(
                   height: 45,
                   width: 90,
